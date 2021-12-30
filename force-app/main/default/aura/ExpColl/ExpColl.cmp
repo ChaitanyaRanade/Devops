@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable" controller="ExpCollController">
+    <aura:attribute name="contacts" type="contact[]"/>
+  <div class="slds-p-around--large" >
+     <div class="slds-page-header" style="cursor: pointer;" onclick="{!c.sectionOne}">
+      
+      <section class="slds-clearfix">
+        <div class="slds-float--left ">
+            <lightning:icon class="slds-show" aura:id="articleOne" iconName="utility:add" size="x-small" alternativeText="Indicates add"/>
+            <lightning:icon class="slds-hide" aura:id="articleOne" iconName="utility:dash" size="x-small" alternativeText="Indicates dash"/>
+        </div>
+         <aura:iteration items="{v.contacts}" var="con">
+        <div class="slds-m-left--large">{!con.name}</div>
+        </aura:iteration>
+      </section>
+             
+    </div>
+    <div class="slds-hide slds-p-around--medium" aura:id="articleOne">
+      Test
+    </div>      
+   
+  </div>
+</aura:component>

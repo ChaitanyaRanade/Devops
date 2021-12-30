@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+
+<aura:attribute name="newLead" type="Object"/>
+<aura:attribute name="recordError" type="String"/>
+
+    <force:recordData aura:id="recordComponent"
+          layoutType="FULL"
+          targetFields="{!v.newLead}"
+          targetError="{!v.recordError}"
+    />
+
+    <!-- Display the new Lead form -->
+    <div class="slds-form_stacked">
+        <Lightning:input aura:id="leadField" name="firstName" label="First Name"
+                         value="{!v.newLead.FirstName}" required="true"/>
+
+        <Lightning:input aura:id="leadField" name="lastname" label="Last Name"
+                      value="{!v.newLead.LastName}" required="true"/>
+
+        <Lightning:input aura:id="leadField" name="title" label="Title"
+                      value="{!v.newLead.Company}" />
+
+        <Lightning:button label="Save Lead" onclick="{!c.handleSaveLead}"
+                   variant="brand" class="slds-m-top_medium"/>
+   </div>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,force:lightningQuickAction">
+	<div style = "position:relative;left:1000px;">
+    <input type="text" class="form-control" onkeyup="{!c.searchKeyChange}"
+            placeholder="Search"/>
+        </div>
+</aura:component>

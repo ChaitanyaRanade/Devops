@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller="SalesLeaderBoardController">
+<aura:handler name="init" value="{!this}" action="{!c.getData}"/>
+<aura:attribute name="lstsalesuser" type="SalesLeader[]"/>
+<lightning:layout verticalAlign="start" multipleRows="true">
+    <lightning:layoutItem padding="horizontal-small" size="1" smallDeviceSize="1" mediumDeviceSize="1" largeDeviceSize="1" flexibility="auto">
+    <aura:iteration  items="{!v.lstsalesuser}" var="usr">
+        <c:SalesLeaderBoardCard SalesUser="{!usr}"/>
+    </aura:iteration>
+    </lightning:layoutItem>
+</lightning:layout>
+</aura:component>

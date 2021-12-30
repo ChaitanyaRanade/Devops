@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable" controller="HelloWorld" >
+    <aura:attribute name="testVar" type="Account"/>
+    <aura:handler name="init" value="{!this}" action="{!c.InitCall}"/>
+	{!v.testVar.name}
+</aura:component>

@@ -1,0 +1,7 @@
+<aura:component>
+    <lightning:buttonGroup>
+        <lightning:button label="Refresh" variant="neutral" aura:id="mybtn" onclick="{!c.click}"/>
+        <lightning:button label="Edit" variant="neutral" aura:id="mybtn" onclick="{!c.click}"/>
+        <lightning:button label="Save " variant="neutral" aura:id="mybtn" onclick="{!c.click}"/>
+    </lightning:buttonGroup>
+</aura:component>

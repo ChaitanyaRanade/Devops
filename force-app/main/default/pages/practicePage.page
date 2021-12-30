@@ -1,0 +1,6 @@
+<apex:page controller="practiceClass">
+            <apex:form >
+                <apex:outputText value="{!HTMLENCODE(Diagram)}" 
+  style="white-space:pre;" escape="false"/>
+            </apex:form>
+</apex:page>

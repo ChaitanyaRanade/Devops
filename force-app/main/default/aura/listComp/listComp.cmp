@@ -1,0 +1,12 @@
+<aura:component controller="SOQL_Example1">
+    <aura:attribute name="Accounts" type="List"/>
+    <aura:attribute name="Columns" type="Object"/>
+    <div>
+        <lightning:input label="Fist Name" aura:id="firstName"/>
+        <lightning:input label="Last Name" aura:id="lastName"/>
+        <lightning:input label="Phone" aura:id="phone"/>
+        <Lightning:button label="Search" onclick="{!c.search}"/>
+		<br></br>
+        <lightning:datatable keyField="id" data="{!v.Accounts}" columns="{!v.Columns}"/>
+    </div>
+</aura:component>

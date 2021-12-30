@@ -1,0 +1,6 @@
+<apex:page >
+<div>
+  <embed src="/_swf/190003/sfc/flex/DocViewer.swf" flashvars="shepherd_prefix=/sfc/servlet.shepherd&v=06890000003OiiVAAS&mode=chatter_bubble&in_tests=false" width="100%" height="100%" align="middle" id="renditionLarge" quality="high" bgcolor="#f3f3f3" name="renditionLarge" allowscriptaccess="always" allowfullscreen="true" pluginspage="http://www.adobe.com/go/getflashplayer" wmode="opaque" type="application/x-shockwave-flash">
+  </embed>
+  </div>
+</apex:page>

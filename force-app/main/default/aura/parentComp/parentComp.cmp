@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name = "Name" type = "String"/>
+    <aura:handler name = "SampleEvent" event = "c:testEvt" action = "{!c.handleEvent}"/>
+    Name : {!v.Name} <br/>
+    <c:childComp/>
+</aura:component>

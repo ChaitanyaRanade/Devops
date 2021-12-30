@@ -1,0 +1,10 @@
+<apex:page standardController="Account" standardStylesheets="false" sidebar="false" showHeader="false">
+  <apex:stylesheet value="{!URLFOR($Resource.StyleSheet, 'Styles.css')}"/>
+  <h1>My Styled Page</h1>    
+  <p>Great</p>
+  <ul>
+  <apex:repeat value="{!account.contacts}" var="item">
+  <li><apex:outputText value="{!item.name}"/></li>
+  </apex:repeat>
+  </ul>
+</apex:page>

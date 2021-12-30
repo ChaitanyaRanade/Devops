@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="querySelector">
+        <div class="slds-var-m-around_medium">
+            <template for:each={userNames} for:item="usr">
+                <div class="name" key={usr}>{usr}</div>
+            </template>
+            <h1>Hello Query Selector Demo</h1>
+            <div class="child" lwc:dom="manual"></div>
+            <button onclick={onClickHandler}>Click Me</button>
+        </div>
+    </lightning-card>
+</template>

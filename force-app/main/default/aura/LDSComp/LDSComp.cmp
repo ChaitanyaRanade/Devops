@@ -1,0 +1,18 @@
+<aura:component implements = "force:hasRecordId,flexiPage:availableForRecordHome">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId = "{!v.recordId}"
+                      layoutType = "FULL"
+                      targetRecord = "{!v.record}"
+                      targetFields = "{!v.simpleRecord}"
+                      targetError = "{!v.recordError}"
+                      recordUpdated = "{!c.handleRecordUpdate}"
+                      mode = "VIEW"/>
+    {!v.simpleRecord.Industry}
+
+    
+</aura:component>

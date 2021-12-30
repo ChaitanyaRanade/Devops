@@ -1,0 +1,29 @@
+<apex:page standardController="Account" >
+<apex:pageBlock >
+ <apex:pageBlockSection title="A section title" >
+     I'm three components deep
+     <p>Current Year is {!YEAR(TODAY())}</p>
+     <p>Maximum: {!MAX(1,2,3,4,5,6,7,8,9)}</p>
+     <p>Is it true? {!IF(Contains('salesforce.com','force.com'),'Yeah','Nope')}</p>
+ <apex:outputLink value="{!URLFOR($Action.Account.New)}">Click Me!</apex:outputLink>
+ </apex:pageBlockSection>
+ <apex:pageBlockSection title="A section title" >
+ {!$User.FirstName &' '& $User.LastName}
+ <p>Today's date is {!TODAY()}</p>
+ <p>Next week it will be {!TODAY()+7}</p>
+ <p>Logged in user is {!$User.FirstName}</p>
+ <p>Account Name is {!account.name}</p>
+ <p>Owner of this account is: {!account.Owner.Name}</p>
+ <p>The ticker symbol is: {!account.TickerSymbol}</p>
+ <apex:pageblockTable value="{!account.contacts}" var="Phone">
+ <apex:column value="{!Phone.phone}"/>
+ </apex:pageblockTable>
+ </apex:pageBlockSection>
+ <apex:pageblockSection >
+ <apex:detail />
+ </apex:pageblockSection>
+ <apex:pageblocksection title="Custom Section Title">
+ <apex:outputField value="{!account.name}"/>
+ </apex:pageblocksection>
+</apex:pageBlock>
+</apex:page>

@@ -1,0 +1,12 @@
+<aura:component>
+<aura:attribute name="DateTimeInput" type="DateTime"/>
+<aura:attribute name="Output" type="DateTime" />
+<lightning:input label="Input Date" type="datetime-local" name="date" value="{!v.DateTimeInput}"/>
+<Lightning:select aura:id="select" name="select" label="Select a pie" onchange="{!c.onChange}">
+    <option value="">Choose one...</option>
+    <option value="YYYY MM DD">YYYY MM DD</option>
+    <option value="MM DD YYYY, hh:mm:ss a">MMMM DD YYYY, hh:mm:ss a format</option>
+    <option value="yyyy-MM-dd HH:mm:ss.SSS">yyyy-MM-dd HH:mm:ss.SSS format</option>
+</Lightning:select>
+<p>outputDate {!v.Output}</p>
+</aura:component>

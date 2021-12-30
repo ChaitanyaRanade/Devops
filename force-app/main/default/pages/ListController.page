@@ -1,0 +1,20 @@
+<apex:page controller="AcctController1" >
+ <apex:form >
+ <apex:selectList value="{!selected}" size="1">
+ <apex:selectOptions value="{!values}"/>
+ </apex:selectList>
+ <br/>
+ <apex:inputtext value="{!searchText}"/>
+ <apex:commandButton value="Perform Search" Action="{!doSearch}" reRender="block"/>
+ <apex:pageBlock id="block" >
+ <apex:pageblockTable value="{!results}" var="tab">
+ <apex:column value="{!tab.name}"/>
+ <apex:column value="{!tab.phone}"/>
+ <apex:column value="{!tab.email}"/>
+ </apex:pageblockTable>
+ 
+ </apex:pageBlock>
+  
+  
+  </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page standardController="Account" recordSetVar="allaccounts" >
+  
+  <apex:pageblock title="All Accounts">
+  
+  <apex:dataList value="{!allaccounts}" var="a" >
+  {!a.name}
+  </apex:dataList>
+  
+  <apex:form >
+  <apex:commandButton value="Previous" Action="{!previous}"/>
+  <apex:commandButton value="Next" Action="{!next}"/>
+  </apex:form>
+  
+  </apex:pageblock>
+</apex:page>

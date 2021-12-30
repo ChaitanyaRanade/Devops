@@ -1,0 +1,6 @@
+<aura:component>
+    <div class="spinner" aura:id="spinner">
+        <Lightning:spinner alternativeText="Loading"/>
+    </div>
+    <lightning:button class="btn" variant="brand" label="Submit" onclick="{!c.handleClick}"/>
+</aura:component>

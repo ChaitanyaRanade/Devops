@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="numbers" type="List"/>
+    <ui:button label="DisplayNum" press="{!c.calcNum}"/>
+    <aura:iteration var="num" items="{!v.numbers}">
+    {!num.value}<br></br>
+    </aura:iteration>
+    <ui:inputText label="Name1" aura:Id="Name" placeholder="Enter the value"/><br></br>
+    <ui:outputText aura:Id="Name1" value=""/>
+    <ui:button aura:Id="buttonId" label="Hit me!" press="{!c.getValue}"/>
+    <aura:attribute name="first" type="String" default="John"/>
+    <aura:attribute name="second" type="String" default="Kerry"/>
+    <ui:inputText label="first name" value="{!V.first}" updateOn="keyup"/>
+    <ui:inputText label="Second name" value="{!V.second}" updateOn="keyup"/>
+    <ui:outputText value="{!v.first+' '+ v.second}"/>
+                                           
+    
+</aura:component>

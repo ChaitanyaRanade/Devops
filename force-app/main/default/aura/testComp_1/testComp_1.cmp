@@ -1,0 +1,33 @@
+<aura:component controller="conControl">
+    <aura:attribute name="contactRows" type="Object[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="container">
+        <p>
+        	<b> List of Contacts </b>
+        </p>
+        <p style="color:blue">
+        	<b>Test Comment</b>
+        </p>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr>
+                    <th><strong> Id </strong></th>
+                    <th> <strong>  Name </strong> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration var="cell" items="{!v.contactRows}">
+                    <tr>
+                        <td> <a href="{! '/'+cell.Id}"> {!cell.Id} </a> </td>
+                        <td> {!cell.Name}  </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+ 	</div>
+    <div aura:id="test">
+    	<p>
+        	<b>Demo Application</b>
+        </p>
+    </div>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <lightning:card title="CONTACTS">
+        <c:SearchBar />
+        <c:accordianDemo />
+    </lightning:card>
+</aura:component>

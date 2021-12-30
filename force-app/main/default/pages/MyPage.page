@@ -1,0 +1,28 @@
+<apex:page StandardController="Account">
+  <apex:form >
+  <apex:pageBlock Title="Account Details" >
+  <apex:pageBlockSection >
+      <apex:inputField value="{!account.name}"/>
+      <apex:inputField value="{!account.AccountNumber}" label="My Number"/>
+      <apex:outputField value="{!account.phone}"/>
+      </apex:pageBlockSection>
+      <apex:pageblockButtons >
+      <apex:commandButton value="Save" Action="{!save}"/>
+      <apex:commandButton value="Cancel" Action="{!cancel}"/>
+      </apex:pageblockButtons>
+        <apex:pageblockTable value="{!account.contacts}" var="ac">
+      <apex:column >
+      <apex:commandLink reRender="ren">
+        {!ac.name}
+        <apex:param value="{!ac.id}" name="cid"/>
+        </apex:commandLink>
+        </apex:column>
+      <apex:column value="{!ac.email}"/>
+      <apex:column value="{!ac.phone}"/>
+      </apex:pageblockTable>
+    </apex:pageBlock>
+  </apex:form>
+  <apex:outputPanel id="ren">
+  <apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="false"/>
+  </apex:outputPanel>
+</apex:page>

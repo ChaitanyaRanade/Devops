@@ -1,0 +1,4 @@
+<aura:component >
+	<aura:registerEvent name = "SampleEvent" type = "c:testEvt"/>
+    <Lightning:button label = "Submit" onclick = "{!c.handleClick}"/>
+</aura:component>

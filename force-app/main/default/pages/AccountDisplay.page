@@ -1,0 +1,12 @@
+<apex:page standardController="Account" >
+<apex:pageblock >
+  <apex:pageBlockSection title="Custom Section Title">
+  <apex:outputField value="{!account.name}"/>
+  <apex:outputField value="{!account.Owner.name}"/>
+  <apex:pageBlockTable value="{!account.contacts}" var="item">
+  <apex:outputLink value="{! $Page.Dynamic}">Click me!</apex:outputLink>
+  <apex:column value="{!item.name}"/>
+  </apex:pageBlockTable>
+  </apex:pageBlockSection> 
+</apex:pageblock>
+</apex:page>

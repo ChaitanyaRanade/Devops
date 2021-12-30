@@ -1,0 +1,6 @@
+<apex:page controller="student_list">
+    Last Name : {!std.lastname}<br/><br/>
+    First Name : {!std.firstName}<br/><br/>
+    City : {!std.city}<br/><br/>
+    Phone : {!std.phone}<br/><br/>
+</apex:page>

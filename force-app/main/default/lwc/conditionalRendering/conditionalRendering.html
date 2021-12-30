@@ -1,0 +1,12 @@
+<template>
+    <lightning-input type="checkbox" label="Show Div" onchange={capturevalue}></lightning-input>
+    <template if:true={booleanValue}>
+        <div>I am here</div>
+        </template>
+    <template for:each={cityList} for:item="city">
+        <p key={city}>city</p>
+    </template>
+    <template iterator:itr={cityList}>
+        <p key={itr.value}>{itr.value} First {itr.First}</p>
+    </template>
+</template>

@@ -1,0 +1,58 @@
+<aura:component controller="ExpCollController" implements="force:appHostable">
+<aura:attribute name="contacts" type="Contact[]"/>
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+<aura:handler event="c:SearchKeyChange" action="{!c.searchKeyChange}"/>
+
+<lightning:accordion >
+    <aura:iteration items="{!v.contacts}" var="con" indexVar="ind">
+        
+        <lightning:accordionSection name="{!ind}" label="{!con.Name}">
+              <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--striped slds-max-medium-table--stacked-horizontal"
+                       role="grid">
+                    <thead>
+                        <tr>
+                            <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Name
+                            </th>
+                           <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Account
+                            </th>
+                           <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Phone
+                            </th>
+                           <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Lead Source
+                            </th>
+                           <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Department
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                           <tr class="slds-hint-parent">
+                               <td role="gridcell" class="slds-cell-wrap" data-label="Name" aura:id="row1"><a href = "{!'/'+con.Id}" target="_blank">
+                                    {!con.Name}</a>
+                                </td>
+                                <td role="gridcell" class="slds-cell-wrap" data-label="accName" aura:id="row1"><a href = "{!'/'+con.AccountId}">
+                                    {!con.Account.Name}</a>
+                                </td>
+                               <td role="gridcell" class="slds-cell-wrap" data-label="accName" aura:id="row1">
+                                    {!con.Phone}
+                                </td>
+                               <td role="gridcell" class="slds-cell-wrap" data-label="accName" aura:id="row1">
+                                    {!con.LeadSource}
+                                </td>
+                               <td role="gridcell" class="slds-cell-wrap" data-label="accName" aura:id="row1">
+                                    {!con.Department}
+                                </td>
+
+                            </tr>
+
+                       
+                    </tbody>
+                </table>
+        </lightning:accordionSection>
+    </aura:iteration>
+</lightning:accordion> 
+
+</aura:component>

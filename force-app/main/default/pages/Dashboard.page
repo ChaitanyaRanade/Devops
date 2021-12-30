@@ -1,0 +1,20 @@
+<apex:page showHeader="false" controller="DashboardController">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<apex:sectionHeader title="Dashboard" subtitle="Account Dashboard" description="This is my custom page" printUrl="/apex/Dashboard"/>
+    <apex:pageblock >
+        <apex:form >
+            <apex:selectList size="1">
+                <apex:selectOption itemlabel="Test1" itemValue="Value1"/>
+                <apex:selectOption itemlabel="Test2" itemValue="Value2"/>
+            </apex:selectList>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:selectList size="1">
+                <apex:selectOptions value="{!myOptions}"></apex:selectOptions>
+            </apex:selectList>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:repeat value="{!conList}" var="con">
+                <apex:outputField value="con.name"/>
+            </apex:repeat>
+        </apex:form>
+    </apex:pageblock>    
+</apex:page>

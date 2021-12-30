@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Event template">
+<aura:attribute name="Owner" type="String"/>
+</aura:event>

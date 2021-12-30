@@ -1,0 +1,21 @@
+<apex:page controller="SOQL_Example1">
+    <apex:form >
+    	<apex:pageBlock title="SOQL_Sample" id="pb">
+            <apex:pageBlockButtons location="top">
+            <apex:commandButton value="ALL ROWS" action="{!fetchAll}" rerender="pb"/>
+            <apex:commandButton value="LIMIT" action="{!setLimit}" rerender="pb"/>
+            <apex:commandButton value="dynamicLIMIT" action="{!dynamicLimit}" rerender="pb"/>
+            <apex:commandButton value="CustomCondition" action="{!CustomCondition}" rerender="pb"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!accounts}" var="a">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.Industry}"/>
+                <apex:column value="{!a.Phone}"/>
+                <apex:column value="{!a.CreatedDate}"/>
+                <apex:column value="{!a.LastModifiedDate}"/>
+                <apex:column value="{!a.LastViewedDate}"/>
+                <apex:column value="{!a.LastViewedDate}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
