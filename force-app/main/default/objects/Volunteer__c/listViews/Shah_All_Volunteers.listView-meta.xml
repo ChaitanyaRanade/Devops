@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shah_All_Volunteers</fullName>
+    <columns>NAME</columns>
+    <columns>Blood_Group__c</columns>
+    <columns>Gender__c</columns>
+    <columns>Height_in_CMs__c</columns>
+    <columns>Weight_in_KGs__c</columns>
+    <columns>BMI__c</columns>
+    <columns>Category__c</columns>
+    <columns>Mobile__c</columns>
+    <columns>Email__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Category__c</field>
+        <operation>equals</operation>
+        <value>OVER-WEIGHT</value>
+    </filters>
+    <label>Shah All Volunteers</label>
+</ListView>

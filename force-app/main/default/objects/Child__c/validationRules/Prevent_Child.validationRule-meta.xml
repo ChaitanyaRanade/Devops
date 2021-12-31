@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Child</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( ISPICKVAL( Parent__r.Status__c , &apos;Blocked&apos;) , true, false)</errorConditionFormula>
+    <errorMessage>You can not create or edit a child record when parent record is locked</errorMessage>
+</ValidationRule>

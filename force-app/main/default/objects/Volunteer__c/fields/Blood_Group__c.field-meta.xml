@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blood_Group__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select Your Blood Type (Group)</inlineHelpText>
+    <label>Blood Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A Positive</fullName>
+                <default>false</default>
+                <label>A Positive</label>
+            </value>
+            <value>
+                <fullName>B Positive</fullName>
+                <default>false</default>
+                <label>B Positive</label>
+            </value>
+            <value>
+                <fullName>AB Positive</fullName>
+                <default>false</default>
+                <label>AB Positive</label>
+            </value>
+            <value>
+                <fullName>O Positive</fullName>
+                <default>false</default>
+                <label>O Positive</label>
+            </value>
+            <value>
+                <fullName>A Negative</fullName>
+                <default>false</default>
+                <label>A Negative</label>
+            </value>
+            <value>
+                <fullName>B Negative</fullName>
+                <default>false</default>
+                <label>B Negative</label>
+            </value>
+            <value>
+                <fullName>AB Negative</fullName>
+                <default>false</default>
+                <label>AB Negative</label>
+            </value>
+            <value>
+                <fullName>O Negative</fullName>
+                <default>false</default>
+                <label>O Negative</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
